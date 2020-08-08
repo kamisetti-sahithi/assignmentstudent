@@ -9,6 +9,9 @@ public class StudentMain {
 	
 	
 	Map<String,Student> map=new HashMap<String,Student>();
+	Set<Student> even = new HashSet<>();
+	Set<Student> odd = new LinkedHashSet<>();
+	List<String> rollno=new ArrayList<>();
     
 	public void runApp() {
 		Student s1=new Student("1A",20);
@@ -28,21 +31,26 @@ public class StudentMain {
 		 Set<String> targetSet =map.keySet();
 		 for(String str:targetSet) {
 			 Student s=map.get(str);
+			 int age=s.getAge();
+			 String rollno=s.getRollno();
 			 if((s.getAge())%2==0) {
-				 System.out.println("age even="+s.getAge());
+				 even.add(s);
+				 
 			 }
 			 else {
-				 System.out.println("age odd="+s.getAge());
+				 odd.add(s);
+				 
 			 }
+			 System.out.println("age is"+s.getAge()+" "+"roll no is"+s.getRollno());
 				 
 			 
 			 
 			 
 			 
 		 }
-		 List<Student> list=new ArrayList<>();
-		 for(Student st:list) {
-			 System.out.println("rollno="+st.getRollno());
+		 
+		 
+		 
 		 }
 		 
 		
